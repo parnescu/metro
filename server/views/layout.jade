@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+	head
+		title Metro - test
+		link(rel='stylesheet', href='css/main.css')
+		script(src="js/main.js", type='text/javascript')
+	body
+		#page
+			#header
+				h1
+					img.logo(src="res/logo.png", alt="Metro Play Casino")
+			#main
+				img.screen(src="res/game.jpg", alt="Game Screen")
+				#content 
+					p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor bibendum quam, vitae ultrices risus tincidunt eget. Mauris et metus viverra tortor pretium dignissim non eget dolo
+					form(name="userData", action="#submit", id="userData")
+						fieldset
+							.element
+								label(for="userName") Name
+								input(required type="text", id="userName", name="userName", placeholder="Name")
+							.element
+								label(for="userEmail") Email
+								input(required type="email", id="userEmail", name="userEmail", placeholder="Email")
+							.actions
+								button#submitBtn Go go gadget button
+			#footer

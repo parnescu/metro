@@ -1,0 +1,61 @@
+html, body, h1, h2, h3, h4, h5, h6, div, p, span, a, ul, li, fieldset { margin:0; padding:0;}
+html, body { width:100%; height:100%;}
+img { width:100%; height:auto;}
+
+body {
+	background:url('../res/background.jpg') 0 0 no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color:#fff;
+}
+
+/* take mobile first approach ... stretch everything to page width */
+#header, 
+#main,
+#content,
+#footer { -moz-box-sizing:border-box; box-sizing:border-box; width:100%; clear:both; display: block; overflow: hidden;}
+
+#header { width:100%; margin:0 auto;}
+
+#main { padding:1em;}
+#main .screen { width:100%; height:auto;}
+
+#content .description { border:.3em dashed #ccc; padding:.5em; margin:1em 0;}
+#content form fieldset { border:none;}
+#content form input,
+#content form button, 
+#content form label { width:100%;}
+#content form label { display: none;}
+#content form input[type=text],
+#content form input[type=email] { color:#fff; -moz-box-sizing:border-box; box-sizing:border-box; border-radius: .3em; border: none; background:#bbb; padding:.4em 1em; margin-bottom:.5em;}
+
+/* this needs to be line by line or else it fails */
+#content input::-webkit-input-placeholder {color:#eee;}
+#content input:-moz-placeholder { color:#eee;}
+
+
+
+/* medium screens */
+@media (min-width: 480px) and (max-width:640px){
+	#content form .element { width:50%; display: inline-block;}
+	#content form .element input { width:85%;}
+	#content form .element input[type=text] { float:left;}
+	#content form .element input[type=email] { float:right;}
+}
+
+/* larger screens */
+@media (min-width: 680px){
+	#main .screen { float:left;}
+	#main > .screen,
+	#main #content { width:48%; clear:none; display: inline-block;}
+	#main #content { float:right;}
+}
+
+/* set the header to the picture's actual width to prevent stretching */
+@media (min-width: 480px){ #header { width:420px;} }
+
+body.legacy { background-color:#efefef;} 
+body.ie7 #main,
+body.ie8 #main { padding:0em;}
